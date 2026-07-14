@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Spin Wheel - Pari, Jafir, Open</title>
+<style>
+  body { text-align: center; font-family: Arial; background: #f0f0f0; }
+  #wheel { width: 300px; height: 300px; border-radius: 50%; border: 10px solid gold; position: relative; margin: 50px auto; }
+  .slice { width: 50%; height: 50%; position: absolute; top: 50%; left: 50%; transform-origin: 0% 0%; }
+  #pari { background: blue; transform: rotate(0deg) skewY(-30deg); }
+  #jafir { background: red; transform: rotate(120deg) skewY(-30deg); }
+  #open { background: green; transform: rotate(240deg) skewY(-30deg); }
+  #pointer { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 40px solid red; margin: auto; }
+</style>
+</head>
+<body>
+<h2>Spin the Wheel!</h2>
+<div id="pointer"></div>
+<div id="wheel">
+  <div id="pari" class="slice"></div>
+  <div id="jafir" class="slice"></div>
+  <div id="open" class="slice"></div>
+</div>
+<button onclick="spin()">Spin</button>
+<p id="result"></p>
+
+<script>
+function spin() {
+  const options = ['Pari', 'Jafir', 'Open'];
+  const choice = options[Math.floor(Math.random() * options.length)];
+  document.getElementById('result').textContent = 'It landed on: ' + choice + '!';
+}
+</script>
+</body>
+</html>

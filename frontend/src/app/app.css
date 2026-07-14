@@ -1,0 +1,64 @@
+.primary-button {
+    border-radius: 0.5rem;
+    background: #0891b2;
+    padding: 0.7rem 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.secondary-button,
+.danger-button {
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    padding: 0.6rem 0.9rem;
+    font-weight: 600;
+    color: #cbd5e1;
+}
+
+.danger-button {
+    color: #fca5a5;
+}
+
+.metric-panel {
+    border: 1px solid #1e293b;
+    border-radius: 0.5rem;
+    background: #0f172a;
+    padding: 1rem;
+}
+
+.metric-panel span {
+    display: block;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.metric-panel strong {
+    display: block;
+    margin-top: 0.4rem;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.status-pill {
+    border-radius: 999px;
+    background: #334155;
+    padding: 0.25rem 0.65rem;
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.status-active {
+    background: #064e3b;
+    color: #86efac;
+}
+
+.form-input {
+    margin-top: 0.45rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+    background: #020617;
+    padding: 0.75rem;
+    color: white;
+}

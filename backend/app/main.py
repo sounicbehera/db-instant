@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from secrets import token_urlsafe
 from typing import Literal
 from fastapi.middleware.cors import CORSMiddleware
+from app.services.kubernetes import get_cluster_nodes
 
 app = FastAPI(title="DB-Instant API")
 app.add_middleware(
@@ -33,6 +34,14 @@ databases: list[DatabaseResponse] = []
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+@app.get("/api/cluster/health")
+def cluster_health():
+    nodes = get_cluster_nodes()
+    return {
+        "connected": True,
+        "nodes": nodes,
+    }
 
 @app.get("/api/databases")
 def list_databases():
